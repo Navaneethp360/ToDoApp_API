@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>To-Do Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Dashboard</h1>
+
+        <!-- Add Todo Form -->
+        <form id="addTodoForm" class="add-form">
+            <input type="text" id="newTodo" placeholder="Enter a task" required autocomplete="off" />
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Status Message -->
+        <div id="addStatus" class="status-message"></div>
+
+        <!-- Todo List and Logout Container -->
+        <div class="todo-logout-wrapper">
+            <ul id="todoList" class="todo-list"></ul>
+            <div class="logout-container">
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
