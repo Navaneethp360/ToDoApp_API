@@ -1,6 +1,8 @@
 # To-Do List API with ASP.NET Core
 
-A simple multi-user authenticated To-Do List application built with **ASP.NET Core** to learn and demonstrate building RESTful APIs with JWT authentication.
+A fully functional multi-user To-Do List application built to explore and understand **ASP.NET Core**, **Entity Framework**, and **JWT-based authentication**.
+
+This project helped me **learn backend API development from scratch** — including authentication, database integration, and building a real-world UI to interact with it.
 
 ---
 
@@ -33,9 +35,20 @@ This project is a practical and fun way I learned how to build secure, RESTful A
 - **Task Management:** Add new tasks, mark as completed/uncompleted, delete tasks
 - **User-specific Data:** Each user only accesses their own tasks
 - **Simple Responsive UI:** Dashboard with task list, add task form, and logout
+- **Interactive Swagger UI** to test and debug API endpoints
 
 ---
+## Folder Structure
 
+| Folder | Purpose |
+|--------|---------|
+| **Controllers** | Handles API requests and maps HTTP methods to logic |
+| **Models** | Represents app data (User, TodoItem) |
+| **DTOs** | Controls data format for input/output |
+| **Data** | `ApplicationDbContext` handles DB interactions |
+| **Services** | `TokenService` generates JWT tokens |
+
+---
 ## How I Built It
 
 1. **Set up ASP.NET Core API project:** Created models, database context, and configured EF Core for SQL Server.
@@ -44,6 +57,15 @@ This project is a practical and fun way I learned how to build secure, RESTful A
 4. **Built Frontend:** Created a simple, clean UI with HTML, CSS, and JavaScript to interact with API.
 5. **Tested & Debugged:** Verified APIs using Swagger and frontend integration with proper error handling.
 6. **Polished UI:** Styled forms, buttons, and task list for a professional look.
+   
+---
+## Authentication Flow (JWT)
+
+- On login, the API generates a token containing the user's ID
+- The token is returned to the frontend and stored in `localStorage`
+- On every request, the token is sent in the `Authorization: Bearer <token>` header
+- The backend validates the token and authorizes the user
+
 
 ---
 
@@ -70,10 +92,18 @@ This project is a practical and fun way I learned how to build secure, RESTful A
 
 This project helped me understand:
 
-- REST principles and API design
-- Token-based authentication and authorization
-- Entity Framework migrations and database seeding
-- Frontend-backend integration with Fetch API
+| Concept | What I Learned |
+|--------|----------------|
+| REST API | HTTP methods to access and modify data |
+| Controller | Route logic and request handling |
+| Model | Database structure |
+| DTO | Safely transfer data between frontend/backend |
+| EF Core | ORM to interact with SQL Server |
+| Password Hashing | Secure credential storage |
+| JWT | Stateless authentication |
+| Middleware | Intercepts HTTP requests for validation |
+| Swagger | API testing and documentation UI |
+
 
 Next, I plan to:
 
